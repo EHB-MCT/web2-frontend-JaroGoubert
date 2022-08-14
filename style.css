@@ -1,0 +1,333 @@
+*,
+*::before,
+*::after {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #161521;
+    margin: 0;
+    padding: 1rem;
+}
+
+h1 {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.pIndex {
+    text-align: center;
+    color: goldenrod;
+}
+
+.index-box{
+    width: 50%;
+    margin: auto;
+    
+}
+.btn-index {
+    display: inline-block; vertical-align: top;
+}
+
+/*header*/
+.logo {
+    padding: 0 1rem;
+    margin: 0;
+    text-align: center;
+    width: 7rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar svg {
+    fill: #fff;
+
+
+}
+
+.navbar svg:hover {
+    color: goldenrod;
+    fill: goldenrod;
+}
+
+
+.navbar ul {
+    list-style: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    display: block;
+    padding: 25px 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navbar a:hover {
+    color: goldenrod;
+}
+
+/*Cards*/
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.card {
+    --padding: 1rem;
+    color: white;
+    background: #40404D;
+    border: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
+    border-radius: .75rem;
+    overflow: hidden;
+    transition: 200ms transform ease-in-out;
+}
+
+.card-header {
+    font-size: 1.5rem;
+    padding: var(--padding);
+    padding-bottom: 0;
+    margin-bottom: .5rem;
+}
+
+
+
+.card-header.card-image {
+    padding: 0;
+    overflow: hidden;
+    background-color: #40404D;
+}
+
+.card-header.card-image>img {
+    display: block;
+    width: 100%;
+    max-height: 200px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card:hover {
+    transform: scale(1.025);
+    background: goldenrod;
+}
+
+.card-body {
+    font-size: .9rem;
+    padding: 0 var(--padding);
+}
+
+.card-footer {
+    margin-top: 1rem;
+    padding: var(--padding);
+    padding-top: 0;
+}
+
+.btn {
+    --color: #2C66AF;
+    background: var(--color);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: .5em .75em;
+    border-radius: .25em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: hsl(200, 50%, 60%);
+}
+
+.btn.btn-outline {
+    background: none;
+    border: 1px solid var(--color);
+    color: var(--color);
+}
+
+.btn.btn-outline:hover {
+    background: hsl(200, 50%, 90%);
+}
+
+.btn+.btn {
+    margin-left: .25rem;
+}
+
+/*footer*/
+
+.footer img {
+
+    padding: 0 1rem;
+    margin: 0;
+    text-align: center;
+    width: 4rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer p {
+    color: #fff;
+    font-size: .8rem;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*popup*/
+.popup {
+    width: 75%;
+    border-radius: .75rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    padding: 1rem;
+    color: white;
+    background: #40404D;
+    border: none;
+    height: 70%;
+    overflow: auto;
+}
+
+.popup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.popup-image {
+    display: block;
+    width: 70%;
+    height: 70%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.popup-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.open-popup {
+    visibility: visible;
+}
+
+.popup button {
+    --color: #2C66AF;
+    background: var(--color);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: .5em .75em;
+    border-radius: .25em;
+    cursor: pointer;
+}
+
+.popup.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    align-items: flex-start;
+    text-align: left;
+
+    width: 50%;
+    height: 50%;
+
+}
+
+.popup h2 {
+    text-align: left;
+    width: 50%;
+}
+
+/*FORM*/
+label {
+    color: #fff;
+}
+
+.field {
+    padding: .5rem 1rem;
+}
+
+input {
+    background: none;
+    color: #fff;
+    border-radius: 20px;
+    border: .1em solid #2C66AF;
+    width: 250px;
+    height: 30px;
+    padding-left: .5rem;
+    font-size: 1em;
+}
+
+.input_disabled {
+    background: rgba(255, 255, 255, .2);
+
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/*chooseMenu*/
+
+
+.selectOption {
+    color: #2C66AF;
+}
+.center {
+    margin: auto;
+}
+.chooseMenu {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    width: 50%;
+    height: 4rem;
+    padding: 1rem;
+    color: white;
+    background: none;
+    border: 10rem;
+    border: .25rem solid #2C66AF;
+    border-radius: 6rem;
+
+}
+
+/*chart*/
+.apexcharts-menu-open{
+    background: black;
+}
+.apexcharts-xaxis-texts-g{
+    color: #fff;
+    opacity: 100%;
+}
+
+/*link*/
+a {
+    text-decoration: none;
+}
